@@ -695,3 +695,113 @@ p{ margin:0; }
   .contact-links{ gap:32px; }
   .contact-form{ grid-template-columns:1fr; padding:26px; }
 }
+
+/* =========================================
+   EXECUTIVE VA DYNAMIC HERO BACKGROUND
+   ========================================= */
+
+.va-background {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.va-float {
+  position: absolute;
+  width: 150px;
+  padding: 14px 18px;
+
+  border: 1px solid rgba(51, 230, 193, 0.22);
+  border-radius: 10px;
+
+  background: rgba(42, 31, 55, 0.38);
+  backdrop-filter: blur(6px);
+
+  color: rgba(255, 255, 255, 0.42);
+
+  font-family: monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+
+  animation: vaFloat 7s ease-in-out infinite;
+}
+
+.va-float span {
+  display: block;
+  color: rgba(51, 230, 193, 0.55);
+  font-size: 9px;
+  margin-bottom: 7px;
+}
+
+.va-float strong {
+  font-weight: 500;
+}
+
+/* Position each Executive VA element */
+
+.va-email {
+  top: 18%;
+  right: 6%;
+}
+
+.va-calendar {
+  top: 62%;
+  right: 25%;
+  animation-delay: -2s;
+}
+
+.va-task {
+  top: 16%;
+  left: 48%;
+  animation-delay: -4s;
+}
+
+.va-meeting {
+  bottom: 8%;
+  left: 54%;
+  animation-delay: -1s;
+}
+
+/* Subtle floating movement */
+
+@keyframes vaFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+/* Keep background cleaner on mobile */
+
+@media (max-width: 768px) {
+
+  .va-float {
+    opacity: 0.35;
+    transform: scale(0.85);
+  }
+
+  .va-task,
+  .va-meeting {
+    display: none;
+  }
+
+  .va-email {
+    top: 12%;
+    right: -35px;
+  }
+
+  .va-calendar {
+    top: 70%;
+    right: -25px;
+  }
+}
