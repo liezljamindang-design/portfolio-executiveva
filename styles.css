@@ -149,38 +149,40 @@ p{ margin:0; }
   position:relative;
   overflow:hidden;
 }
-.hero::before{
-  content:'';
-  position:absolute;
-  top:-180px;
-  right:-220px;
-  width:700px;
-  height:700px;
-  border-radius:50%;
+/* Executive VA workflow background */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
 
-  background:radial-gradient(
-    circle,
-    rgba(51,230,193,0.24) 0%,
-    rgba(51,230,193,0.12) 30%,
-    rgba(51,230,193,0.05) 50%,
-    transparent 72%
+  background-image:
+    linear-gradient(rgba(51,230,193,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(51,230,193,.07) 1px, transparent 1px);
+
+  background-size: 70px 70px;
+
+  mask-image: linear-gradient(
+    to right,
+    transparent 5%,
+    black 45%,
+    black 100%
   );
 
-  pointer-events:none;
-  animation:heroGlowMove 8s ease-in-out infinite alternate;
-  will-change:transform, opacity;
+  opacity: .45;
+  animation: vaWorkflow 18s linear infinite;
+
+  pointer-events: none;
 }
 
-@keyframes heroGlowMove {
-  0% {
-    transform:translate(0, 0) scale(1);
-    opacity:0.7;
+@keyframes vaWorkflow {
+  from {
+    background-position: 0 0;
   }
 
-  50% {
-    transform:translate(-320px, 140px) scale(1.25);
-    opacity:1;
+  to {
+    background-position: 70px 70px;
   }
+}
 
   100% {
     transform:translate(-520px, -60px) scale(1.05);
