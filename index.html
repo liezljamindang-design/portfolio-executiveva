@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -39,7 +39,8 @@
 
       <div class="hero-actions">
         <a href="#contact" class="btn btn-primary">Work With Me</a>
-        <a href="#work" class="btn btn-outline">See the Work</a>
+        <a href="assets/Liezl_Jamindang_Resume.pdf" class="btn btn-outline" target="_blank" rel="noopener" download>Download Resume</a>
+        <a href="#work" class="btn btn-ghost">See the Work</a>
       </div>
 
       <ul class="hero-stats">
@@ -278,7 +279,24 @@
   <div class="wrap contact-inner">
     <p class="eyebrow">Let's Talk</p>
     <h2>Tell me what needs to get done.</h2>
-    <p class="contact-sub">Whether it's your inbox, your next campaign, or a landing page that needs to exist by Friday, send me the brief and I'll tell you honestly what I can do with it.</p>
+    <p class="contact-sub">Whether it's your inbox, your next campaign, or a landing page that needs to exist by Friday, send me the brief below and I'll reply personally.</p>
+
+    <form class="contact-form" id="contactForm" novalidate>
+      <div class="form-row">
+        <label for="cfName">Your name</label>
+        <input type="text" id="cfName" name="name" required autocomplete="name">
+      </div>
+      <div class="form-row">
+        <label for="cfEmail">Your email</label>
+        <input type="email" id="cfEmail" name="email" required autocomplete="email">
+      </div>
+      <div class="form-row form-row-full">
+        <label for="cfMessage">What do you need done?</label>
+        <textarea id="cfMessage" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-large form-submit">Send Message</button>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
 
     <div class="contact-links">
       <a href="mailto:liezljamindang@gmail.com" class="contact-link">
@@ -294,8 +312,6 @@
         <span>Connect with me</span>
       </a>
     </div>
-
-    <a href="mailto:liezljamindang@gmail.com" class="btn btn-primary btn-large">Start the Conversation</a>
   </div>
 </section>
 
