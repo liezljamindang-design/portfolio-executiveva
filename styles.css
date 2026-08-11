@@ -166,6 +166,7 @@ p{ margin:0; }
     transparent 5%,
     black 45%,
     black 100%
+     
   );
 
   opacity: .45;
@@ -730,7 +731,7 @@ p{ margin:0; }
   font-size: 11px;
   letter-spacing: 1px;
 
-  animation: vaFloat 7s ease-in-out infinite;
+  animation: vaFloat 4s ease-in-out infinite;
 }
 
 .va-float span {
@@ -777,7 +778,7 @@ p{ margin:0; }
   }
 
   50% {
-    transform: translateY(-14px);
+    transform: translateY(-20px);
   }
 }
 
