@@ -152,36 +152,39 @@ p{ margin:0; }
 .hero::before{
   content:'';
   position:absolute;
-  top:-120px;
-  right:-160px;
-  width:480px;
-  height:480px;
+  top:-180px;
+  right:-220px;
+  width:700px;
+  height:700px;
   border-radius:50%;
+
   background:radial-gradient(
     circle,
-    rgba(51,230,193,0.18) 0%,
-    rgba(51,230,193,0.08) 35%,
-    transparent 70%
+    rgba(51,230,193,0.24) 0%,
+    rgba(51,230,193,0.12) 30%,
+    rgba(51,230,193,0.05) 50%,
+    transparent 72%
   );
-  pointer-events:none;
 
-  animation:heroGlowMove 10s ease-in-out infinite alternate;
+  pointer-events:none;
+  animation:heroGlowMove 8s ease-in-out infinite alternate;
   will-change:transform, opacity;
 }
+
 @keyframes heroGlowMove {
   0% {
     transform:translate(0, 0) scale(1);
-    opacity:0.65;
+    opacity:0.7;
   }
 
   50% {
-    transform:translate(-120px, 70px) scale(1.18);
+    transform:translate(-320px, 140px) scale(1.25);
     opacity:1;
   }
 
   100% {
-    transform:translate(-260px, -20px) scale(0.95);
-    opacity:0.75;
+    transform:translate(-520px, -60px) scale(1.05);
+    opacity:0.8;
   }
 }
 .hero-inner{
