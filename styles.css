@@ -808,28 +808,30 @@ p{ margin:0; }
 }
 
 /* =========================================
-   CONTACT CARD / BOX
+   CONTACT CARD / BOX - FINAL
 ========================================= */
 
-.contact .container {
-  max-width: 1050px;
+.contact {
+  max-width: 1100px;
+  margin: 80px auto;
   padding: 75px 70px;
 
-  background:
-    linear-gradient(
-      135deg,
-      rgba(38, 30, 51, 0.95),
-      rgba(29, 23, 40, 0.98)
-    );
+  background: linear-gradient(
+    135deg,
+    rgba(38, 30, 51, 0.98),
+    rgba(29, 23, 40, 0.98)
+  );
 
-  border: 1px solid rgba(53, 224, 192, 0.25);
+  border: 1px solid rgba(51, 230, 193, 0.25);
   border-radius: 20px;
 
-  box-shadow:
-    0 25px 70px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
 
   position: relative;
   overflow: hidden;
+
+  color: var(--paper);
+  text-align: center;
 
   transition:
     transform 0.4s ease,
@@ -838,34 +840,32 @@ p{ margin:0; }
 }
 
 
-/* subtle teal glow in upper-right corner */
+/* TEAL GLOW */
 
-.contact .container::before {
+.contact::before {
   content: "";
 
   position: absolute;
-  width: 280px;
-  height: 280px;
+  width: 300px;
+  height: 300px;
 
-  top: -170px;
+  top: -180px;
   right: -120px;
 
-  background: rgba(53, 224, 192, 0.10);
+  background: rgba(51, 230, 193, 0.10);
   border-radius: 50%;
-
   filter: blur(20px);
 
   pointer-events: none;
 }
 
 
-/* small teal accent line */
+/* SMALL TEAL LINE ON TOP */
 
-.contact .container::after {
+.contact::after {
   content: "";
 
   position: absolute;
-
   top: 0;
   left: 50%;
 
@@ -874,43 +874,38 @@ p{ margin:0; }
   width: 90px;
   height: 3px;
 
-  background: var(--teal);
+  background: var(--cyan);
 
   border-radius: 0 0 10px 10px;
 }
 
 
-/* subtle hover */
+/* KEEP TEXT ABOVE EFFECTS */
 
-.contact .container:hover {
-  transform: translateY(-5px);
-
-  border-color: rgba(53, 224, 192, 0.5);
-
-  box-shadow:
-    0 32px 80px rgba(0, 0, 0, 0.28);
-}
-
-
-/* keep content above decorative effects */
-
-.contact .container > * {
+.contact > * {
   position: relative;
   z-index: 2;
 }
 
 
-/* mobile */
+/* HOVER EFFECT */
+
+.contact:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(51, 230, 193, 0.50);
+
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.30);
+}
+
+
+/* MOBILE */
 
 @media (max-width: 850px) {
 
   .contact {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .contact .container {
-    width: 100%;
+    width: calc(100% - 40px);
+    margin: 50px auto;
     padding: 55px 25px;
     border-radius: 16px;
   }
