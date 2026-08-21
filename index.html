@@ -1092,5 +1092,646 @@
   © 2026 Liezl L. Jamindang · Executive Virtual Assistant · Executive Assistant · Operations Support
 </footer>
 
+<!-- =========================================
+     PORTFOLIO MOTION
+========================================= -->
+
+<style>
+
+/* -----------------------------------------
+   SCROLL REVEAL
+----------------------------------------- */
+
+.motion-reveal {
+  opacity: 0;
+  transform: translateY(38px);
+  transition:
+    opacity 0.8s cubic-bezier(.2,.7,.2,1),
+    transform 0.8s cubic-bezier(.2,.7,.2,1);
+  will-change: opacity, transform;
+}
+
+.motion-reveal.motion-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* -----------------------------------------
+   HERO ENTRANCE
+----------------------------------------- */
+
+.hero .eyebrow {
+  animation: heroFadeUp 0.7s ease forwards;
+}
+
+.hero h1 {
+  opacity: 0;
+  animation: heroFadeUp 0.8s ease 0.15s forwards;
+}
+
+.hero-text {
+  opacity: 0;
+  animation: heroFadeUp 0.8s ease 0.3s forwards;
+}
+
+.hero .buttons {
+  opacity: 0;
+  animation: heroFadeUp 0.8s ease 0.45s forwards;
+}
+
+.hero .stats {
+  opacity: 0;
+  animation: heroFadeUp 0.8s ease 0.6s forwards;
+}
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* -----------------------------------------
+   TEAL HEADLINE MOTION
+----------------------------------------- */
+
+.hero .accent {
+  display: inline-block;
+  animation: accentFloat 5s ease-in-out infinite;
+}
+
+@keyframes accentFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+
+/* -----------------------------------------
+   PROFILE PHOTO
+----------------------------------------- */
+
+.profile-photo-wrap {
+  transition:
+    transform 0.45s cubic-bezier(.2,.7,.2,1),
+    box-shadow 0.45s ease;
+}
+
+.profile-photo {
+  transition:
+    transform 0.75s cubic-bezier(.2,.7,.2,1);
+}
+
+.profile-photo-wrap:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 32px 70px rgba(24,18,34,.24);
+}
+
+.profile-photo-wrap:hover .profile-photo {
+  transform: scale(1.035);
+}
+
+
+/* -----------------------------------------
+   PROFILE CAPTION
+----------------------------------------- */
+
+.profile-caption {
+  transition:
+    padding-bottom 0.4s ease,
+    background 0.4s ease;
+}
+
+.profile-photo-wrap:hover .profile-caption {
+  padding-bottom: 28px;
+}
+
+
+/* -----------------------------------------
+   SERVICE CARDS
+----------------------------------------- */
+
+.service-card {
+  position: relative;
+  overflow: hidden;
+
+  transition:
+    transform 0.35s cubic-bezier(.2,.7,.2,1),
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.service-card::after {
+  content: "";
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 3px;
+
+  background: var(--teal);
+
+  transition: width 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-9px);
+
+  border-color: rgba(53,224,192,.75);
+
+  box-shadow:
+    0 24px 48px rgba(0,0,0,.20);
+}
+
+.service-card:hover::after {
+  width: 100%;
+}
+
+
+/* -----------------------------------------
+   PROJECT CARDS
+----------------------------------------- */
+
+.project {
+  transition:
+    transform 0.35s cubic-bezier(.2,.7,.2,1),
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.project:hover {
+  transform: translateY(-7px);
+
+  border-color: var(--teal);
+
+  box-shadow:
+    0 18px 38px rgba(29,23,40,.12);
+}
+
+
+/* -----------------------------------------
+   EXECUTIVE CASE STUDY
+----------------------------------------- */
+
+.case-study {
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.case-study:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 26px 60px rgba(29,23,40,.18);
+}
+
+
+/* -----------------------------------------
+   CASE STUDY COLUMNS
+----------------------------------------- */
+
+.case-box {
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.case-box:hover {
+  transform: translateY(-4px);
+
+  border-color: var(--teal);
+}
+
+
+/* -----------------------------------------
+   EXPERIENCE TIMELINE
+----------------------------------------- */
+
+.job {
+  transition:
+    transform 0.3s ease;
+}
+
+.job::before {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.job:hover {
+  transform: translateX(7px);
+}
+
+.job:hover::before {
+  transform: scale(1.55);
+
+  box-shadow:
+    0 0 0 6px rgba(53,224,192,.10),
+    0 0 20px rgba(53,224,192,.55);
+}
+
+
+/* -----------------------------------------
+   TOOL TAGS
+----------------------------------------- */
+
+.tag {
+  cursor: default;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.tag:hover {
+  transform: translateY(-3px);
+
+  border-color: var(--teal);
+
+  background: rgba(53,224,192,.07);
+}
+
+
+/* -----------------------------------------
+   BUTTON MOTION
+----------------------------------------- */
+
+.btn-primary,
+.btn-secondary,
+.nav-button,
+.contact-button {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.btn-primary:hover,
+.nav-button:hover,
+.contact-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 28px rgba(53,224,192,.24);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-3px);
+
+  border-color: var(--teal);
+
+  color: var(--teal);
+}
+
+
+/* -----------------------------------------
+   NAVIGATION
+----------------------------------------- */
+
+.nav-links > a:not(.nav-button) {
+  position: relative;
+}
+
+.nav-links > a:not(.nav-button)::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -7px;
+
+  width: 0;
+  height: 1px;
+
+  background: var(--teal);
+
+  transition: width 0.3s ease;
+}
+
+.nav-links > a:not(.nav-button):hover::after {
+  width: 100%;
+}
+
+
+/* -----------------------------------------
+   LOGO
+----------------------------------------- */
+
+.logo span {
+  display: inline-block;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.logo:hover span {
+  transform: translateX(4px);
+}
+
+
+/* -----------------------------------------
+   SECTION EYEBROWS
+----------------------------------------- */
+
+.eyebrow {
+  transition:
+    letter-spacing 0.35s ease;
+}
+
+section:hover > .container > .eyebrow,
+.about-text:hover > .eyebrow {
+  letter-spacing: 2.8px;
+}
+
+
+/* -----------------------------------------
+   MOBILE
+----------------------------------------- */
+
+@media (max-width: 850px) {
+
+  .motion-reveal {
+    transform: translateY(24px);
+  }
+
+  .service-card:hover,
+  .project:hover,
+  .case-study:hover,
+  .profile-photo-wrap:hover {
+    transform: none;
+  }
+
+  .job:hover {
+    transform: none;
+  }
+
+}
+
+
+/* -----------------------------------------
+   ACCESSIBILITY
+----------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .motion-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+}
+
+</style>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* ---------------------------------------
+     SCROLL REVEAL ELEMENTS
+  --------------------------------------- */
+
+  const revealElements = document.querySelectorAll(
+    [
+      ".about-grid",
+      ".service-card",
+      ".case-study",
+      ".project",
+      ".job",
+      ".tool-category",
+      ".contact .container"
+    ].join(",")
+  );
+
+
+  revealElements.forEach(function (element, index) {
+
+    element.classList.add("motion-reveal");
+
+    /*
+      Creates a small stagger between nearby
+      cards without making the page feel slow.
+    */
+
+    element.style.transitionDelay =
+      ((index % 3) * 90) + "ms";
+
+  });
+
+
+  /* ---------------------------------------
+     INTERSECTION OBSERVER
+  --------------------------------------- */
+
+  const revealObserver =
+    new IntersectionObserver(
+
+      function (entries, observer) {
+
+        entries.forEach(function (entry) {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add(
+              "motion-visible"
+            );
+
+            observer.unobserve(
+              entry.target
+            );
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -30px 0px"
+      }
+
+    );
+
+
+  revealElements.forEach(function (element) {
+
+    revealObserver.observe(element);
+
+  });
+
+
+  /* ---------------------------------------
+     SUBTLE PROFILE PHOTO PARALLAX
+  --------------------------------------- */
+
+  const profile =
+    document.querySelector(
+      ".profile-photo-wrap"
+    );
+
+
+  if (
+    profile &&
+    window.matchMedia(
+      "(min-width: 851px)"
+    ).matches
+  ) {
+
+    profile.addEventListener(
+      "mousemove",
+      function (event) {
+
+        const rect =
+          profile.getBoundingClientRect();
+
+        const mouseX =
+          event.clientX - rect.left;
+
+        const mouseY =
+          event.clientY - rect.top;
+
+        const centerX =
+          rect.width / 2;
+
+        const centerY =
+          rect.height / 2;
+
+        const rotateY =
+          ((mouseX - centerX) / centerX) * 1.3;
+
+        const rotateX =
+          ((centerY - mouseY) / centerY) * 1.3;
+
+        profile.style.transform =
+          "translateY(-7px) rotateX(" +
+          rotateX +
+          "deg) rotateY(" +
+          rotateY +
+          "deg)";
+
+      }
+    );
+
+
+    profile.addEventListener(
+      "mouseleave",
+      function () {
+
+        profile.style.transform = "";
+
+      }
+    );
+
+  }
+
+
+  /* ---------------------------------------
+     ACTIVE NAVIGATION LINK
+  --------------------------------------- */
+
+  const sections =
+    document.querySelectorAll(
+      "section[id]"
+    );
+
+  const navLinks =
+    document.querySelectorAll(
+      ".nav-links a[href^='#']"
+    );
+
+
+  function updateActiveNavigation() {
+
+    let currentSection = "";
+
+    sections.forEach(
+      function (section) {
+
+        const sectionTop =
+          section.offsetTop - 180;
+
+        if (
+          window.scrollY >= sectionTop
+        ) {
+
+          currentSection =
+            section.getAttribute("id");
+
+        }
+
+      }
+    );
+
+
+    navLinks.forEach(
+      function (link) {
+
+        link.style.color = "";
+
+        if (
+          link.getAttribute("href") ===
+          "#" + currentSection
+        ) {
+
+          if (
+            !link.classList.contains(
+              "nav-button"
+            )
+          ) {
+
+            link.style.color =
+              "var(--teal)";
+
+          }
+
+        }
+
+      }
+    );
+
+  }
+
+
+  window.addEventListener(
+    "scroll",
+    updateActiveNavigation,
+    { passive: true }
+  );
+
+  updateActiveNavigation();
+
+});
+
+</script>
+  
 </body>
 </html>
