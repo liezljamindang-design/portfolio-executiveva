@@ -45,9 +45,7 @@
       line-height: 1.7;
     }
 
-    h1,
-    h2,
-    h3 {
+    h1, h2, h3 {
       font-family: Georgia, "Times New Roman", serif;
       line-height: 1.08;
     }
@@ -218,7 +216,7 @@
       font-size: .73rem;
     }
 
-    /* LIGHT SECTION */
+    /* SECTIONS */
 
     .light {
       background: var(--cream);
@@ -243,16 +241,52 @@
       align-items: start;
     }
 
-    .monogram {
-      min-height: 440px;
+    .profile-photo-wrap {
+      position: relative;
+      overflow: hidden;
       background: var(--dark);
       border-radius: 18px;
-      display: grid;
-      place-items: center;
+      min-height: 440px;
+      box-shadow: 0 24px 55px rgba(24,18,34,.15);
+    }
+
+    .profile-photo {
+      width: 100%;
+      height: 440px;
+      display: block;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .profile-caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 60px 24px 22px;
+      background: linear-gradient(
+        to top,
+        rgba(29,23,40,.98),
+        rgba(29,23,40,.72),
+        transparent
+      );
+      color: white;
+    }
+
+    .profile-caption strong {
+      display: block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.15rem;
+      margin-bottom: 5px;
+    }
+
+    .profile-caption span {
+      display: block;
       color: var(--teal);
-      font-family: Georgia, serif;
-      font-size: 6rem;
-      font-style: italic;
+      font-size: .72rem;
+      line-height: 1.5;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
     .about-text p {
@@ -538,21 +572,21 @@
         padding: 35px 25px;
       }
 
-      .monogram {
-        min-height: 300px;
+      .profile-photo-wrap {
+        min-height: 380px;
+      }
+
+      .profile-photo {
+        height: 380px;
       }
     }
   </style>
 </head>
 
-
 <body>
-
-<!-- NAVIGATION -->
 
 <nav>
   <div class="container nav-inner">
-
     <a href="#home" class="logo">
       Liezl <span>Jamindang</span>
     </a>
@@ -564,16 +598,11 @@
       <a href="#experience">Experience</a>
       <a href="#contact" class="nav-button">Let's Talk</a>
     </div>
-
   </div>
 </nav>
 
-
-<!-- HERO -->
-
 <section class="hero" id="home">
   <div class="container">
-
     <div class="hero-content">
 
       <div class="eyebrow">
@@ -595,23 +624,16 @@
       </p>
 
       <div class="buttons">
-
-        <a href="#contact" class="btn-primary">
-          Work With Me
-        </a>
+        <a href="#contact" class="btn-primary">Work With Me</a>
 
         <a href="resume.pdf" target="_blank" class="btn-secondary">
           Download Resume
         </a>
 
-        <a href="#work" class="btn-secondary">
-          See My Work
-        </a>
-
+        <a href="#work" class="btn-secondary">See My Work</a>
       </div>
 
       <div class="stats">
-
         <div class="stat">
           <strong>10+</strong>
           <span>Years in Ops & Support</span>
@@ -626,24 +648,29 @@
           <strong>AI + Automation</strong>
           <span>Tech-Savvy Support</span>
         </div>
-
       </div>
 
     </div>
   </div>
 </section>
 
-
 <!-- ABOUT -->
 
 <section class="light" id="about">
-
   <div class="container">
-
     <div class="about-grid">
 
-      <div class="monogram">
-        LJ
+      <div class="profile-photo-wrap">
+        <img
+          src="assets/Profile%20Picture.png"
+          alt="Liezl Jamindang"
+          class="profile-photo"
+        >
+
+        <div class="profile-caption">
+          <strong>Liezl J. Jamindang</strong>
+          <span>Executive Assistant · Operations Support · AI-Savvy VA</span>
+        </div>
       </div>
 
       <div class="about-text">
@@ -659,16 +686,14 @@
           My background started in operations, long before I became a Virtual
           Assistant. For 7 years, I ran my own business and handled the details
           that keep a business moving: customers, suppliers, scheduling,
-          orders, payments, inventory, documentation, and daily
-          problem-solving.
+          orders, payments, inventory, documentation, and daily problem-solving.
         </p>
 
         <p>
           Today, I bring that same ownership mindset to executive support.
           I manage priorities, track deadlines and follow-ups, organize
           information, maintain task and opportunity pipelines, prepare
-          executive updates, and flag issues before they become bigger
-          problems.
+          executive updates, and flag issues before they become bigger problems.
         </p>
 
         <p>
@@ -677,7 +702,6 @@
           improve workflows, and reduce repetitive work while keeping human
           judgment at the center.
         </p>
-
 
         <div class="pillars">
 
@@ -706,19 +730,14 @@
           </div>
 
         </div>
-
       </div>
-
     </div>
-
   </div>
 </section>
-
 
 <!-- SERVICES -->
 
 <section id="services">
-
   <div class="container">
 
     <div class="eyebrow">What I Do</div>
@@ -728,24 +747,15 @@
       smoother operations.
     </h2>
 
-
     <div class="service-grid">
 
-      <!-- CARD 1 -->
-
       <div class="service-card">
-
         <div class="service-number">01</div>
-
-        <h3>
-          Executive & Administrative Support
-        </h3>
-
+        <h3>Executive & Administrative Support</h3>
         <p>
           Reliable day-to-day support that helps executives stay focused on
           higher-value priorities.
         </p>
-
         <ul>
           <li>Inbox & email management</li>
           <li>Calendar & scheduling</li>
@@ -754,25 +764,15 @@
           <li>File & information organization</li>
           <li>Confidential administrative support</li>
         </ul>
-
       </div>
 
-
-      <!-- CARD 2 -->
-
       <div class="service-card">
-
         <div class="service-number">02</div>
-
-        <h3>
-          Operations & Project Support
-        </h3>
-
+        <h3>Operations & Project Support</h3>
         <p>
           Keeping priorities, deadlines, ownership, and next actions visible
           so important work continues moving.
         </p>
-
         <ul>
           <li>Task & deadline tracking</li>
           <li>Monday.com board management</li>
@@ -781,25 +781,15 @@
           <li>Executive status updates</li>
           <li>SOP & process documentation</li>
         </ul>
-
       </div>
 
-
-      <!-- CARD 3 -->
-
       <div class="service-card">
-
         <div class="service-number">03</div>
-
-        <h3>
-          AI, Automation & Digital Support
-        </h3>
-
+        <h3>AI, Automation & Digital Support</h3>
         <p>
           Using modern tools to reduce repetitive work, organize information,
           and support more efficient workflows.
         </p>
-
         <ul>
           <li>AI-assisted research</li>
           <li>Prompt engineering</li>
@@ -808,38 +798,27 @@
           <li>Data organization</li>
           <li>Website & digital tool support</li>
         </ul>
-
       </div>
 
     </div>
-
   </div>
 </section>
-
 
 <!-- WORK -->
 
 <section class="light" id="work">
-
   <div class="container">
 
-    <div class="eyebrow">
-      Selected Work
-    </div>
+    <div class="eyebrow">Selected Work</div>
 
     <h2 class="section-title">
       Work that creates
       <span class="accent">clarity and momentum.</span>
     </h2>
 
-
-    <!-- EXECUTIVE OPERATIONS CASE STUDY -->
-
     <div class="case-study">
 
-      <div class="eyebrow">
-        Executive Operations
-      </div>
+      <div class="eyebrow">Executive Operations</div>
 
       <h3>
         Turning a busy opportunity pipeline into clear next actions.
@@ -851,39 +830,28 @@
         documentation, and escalation awareness.
       </p>
 
-
       <div class="case-columns">
 
         <div class="case-box">
-
           <h4>The Challenge</h4>
-
           <p>
             Multiple opportunities were moving at different stages. Missing a
             deadline, follow-up, or next action could allow an opportunity to
             quietly stall.
           </p>
-
         </div>
 
-
         <div class="case-box">
-
           <h4>What I Did</h4>
-
           <p>
             Audited pipeline records in Monday.com, reviewed ownership and
             next actions, identified missing information and blockers,
             monitored follow-up windows, and prepared executive-level updates.
           </p>
-
         </div>
 
-
         <div class="case-box">
-
           <h4>What I Delivered</h4>
-
           <ul>
             <li>✓ Clear task ownership</li>
             <li>✓ Specific next actions</li>
@@ -892,269 +860,153 @@
             <li>✓ Executive Control Briefs</li>
             <li>✓ Follow-up tracking</li>
           </ul>
-
         </div>
 
       </div>
-
     </div>
-
-
-    <!-- OTHER PROJECTS -->
 
     <div class="projects">
 
       <div class="project">
-
         <small>Executive Operations</small>
-
-        <h3>
-          Pipeline Audit & Executive Brief
-        </h3>
-
+        <h3>Pipeline Audit & Executive Brief</h3>
         <p>
           A sanitized demonstration of how I organize ownership, deadlines,
           blockers, next actions, and executive-level reporting.
         </p>
-
       </div>
 
-
       <div class="project">
-
         <small>CRM & Automation</small>
-
-        <h3>
-          GoHighLevel Lead Follow-Up Workflow
-        </h3>
-
+        <h3>GoHighLevel Lead Follow-Up Workflow</h3>
         <p>
           CRM and workflow support designed to keep leads organized, improve
           follow-up consistency, and reduce missed opportunities.
         </p>
-
       </div>
 
-
       <div class="project">
-
         <small>Web & Digital Operations</small>
-
-        <h3>
-          Business Website & Digital Workflow
-        </h3>
-
+        <h3>Business Website & Digital Workflow</h3>
         <p>
           Website and digital project work showing my ability to learn new
           systems, organize requirements, troubleshoot, and ship working
           solutions.
         </p>
-
       </div>
 
     </div>
-
   </div>
 </section>
-
 
 <!-- EXPERIENCE -->
 
 <section id="experience">
-
   <div class="container">
 
-    <div class="eyebrow">
-      Experience
-    </div>
+    <div class="eyebrow">Experience</div>
 
     <h2 class="section-title">
-      A track record built
+      A track record built<br>
       one role at a time.
     </h2>
 
-
     <div class="timeline">
 
-
-      <!-- CURRENT -->
-
       <div class="job">
-
-        <div class="date">
-          2026 - Present
-        </div>
-
-        <h3>
-          Executive Operations Assistant
-        </h3>
-
+        <div class="date">2026 - Present</div>
+        <h3>Executive Operations Assistant</h3>
         <div class="company">
           Confidential Client · Healthcare Services · Remote
         </div>
-
         <p>
           Support executive operations through opportunity pipeline
           management, deadline and follow-up tracking, Monday.com board
           auditing, blocker identification, next-action monitoring,
           documentation, and executive-level reporting.
         </p>
-
       </div>
 
-
-      <!-- EXECUTIVE VA -->
-
       <div class="job">
-
-        <div class="date">
-          2025 - 2026
-        </div>
-
-        <h3>
-          Executive Virtual Assistant
-        </h3>
-
+        <div class="date">2025 - 2026</div>
+        <h3>Executive Virtual Assistant</h3>
         <div class="company">
           Confidential Client · Automation Engineer / Hospital & Clinic Clients
         </div>
-
         <p>
           Managed executive inboxes, calendars, scheduling across time zones,
           research, documentation, reports, project support, and confidential
           administrative information.
         </p>
-
       </div>
 
-
-      <!-- LEAD GENERATION -->
-
       <div class="job">
-
-        <div class="date">
-          2025
-        </div>
-
-        <h3>
-          Instagram Lead Generation Specialist
-        </h3>
-
+        <div class="date">2025</div>
+        <h3>Instagram Lead Generation Specialist</h3>
         <div class="company">
           Confidential Client · Online Fitness Coaching
         </div>
-
         <p>
           Supported prospect engagement, lead qualification, data collection,
-          outreach, and follow-up activities for an online coaching sales
-          pipeline.
+          outreach, and follow-up activities for an online coaching sales pipeline.
         </p>
-
       </div>
 
-
-      <!-- BUSINESS -->
-
       <div class="job">
-
-        <div class="date">
-          2018 - 2025
-        </div>
-
-        <h3>
-          Business Owner & Operations Manager
-        </h3>
-
-        <div class="company">
-          Kirzel's Sweet Tooth & Prints
-        </div>
-
+        <div class="date">2018 - 2025</div>
+        <h3>Business Owner & Operations Manager</h3>
+        <div class="company">Kirzel's Sweet Tooth & Prints</div>
         <p>
           Managed daily operations end to end including customers, suppliers,
           scheduling, orders, payments, inventory, documentation, SOPs,
           workflows, and customer service.
         </p>
-
       </div>
 
-
-      <!-- CAMPAIGN MANAGER -->
-
       <div class="job">
-
-        <div class="date">
-          2016 - 2018
-        </div>
-
-        <h3>
-          Campaign Manager
-        </h3>
-
+        <div class="date">2016 - 2018</div>
+        <h3>Campaign Manager</h3>
         <div class="company">
           Voiceless Technologies Philippines, Inc.
         </div>
-
         <p>
           Managed campaign coordination, client communications, KPI tracking,
           stakeholder reporting, and team performance support.
         </p>
-
       </div>
 
-
-      <!-- QA -->
-
       <div class="job">
-
-        <div class="date">
-          2014 - 2016
-        </div>
-
-        <h3>
-          Quality Assurance Specialist
-        </h3>
-
+        <div class="date">2014 - 2016</div>
+        <h3>Quality Assurance Specialist</h3>
         <div class="company">
           Voiceless Technologies Philippines, Inc.
         </div>
-
         <p>
           Conducted quality audits, call monitoring, calibration, process
           documentation, and performance improvement support.
         </p>
-
       </div>
 
     </div>
-
   </div>
 </section>
-
 
 <!-- TOOLKIT -->
 
 <section class="light">
-
   <div class="container">
 
-    <div class="eyebrow">
-      Toolkit
-    </div>
+    <div class="eyebrow">Toolkit</div>
 
     <h2 class="section-title">
       What I actually work in.
     </h2>
 
-
     <div class="tool-grid">
 
-
       <div class="tool-category">
-
         <h3>Executive & Operations</h3>
-
         <div class="tags">
-
           <span class="tag">Inbox Management</span>
           <span class="tag">Calendar & Scheduling</span>
           <span class="tag">Project Management</span>
@@ -1163,54 +1015,36 @@
           <span class="tag">Documentation</span>
           <span class="tag">SOPs</span>
           <span class="tag">Executive Reporting</span>
-
         </div>
-
       </div>
 
-
       <div class="tool-category">
-
         <h3>Project & CRM</h3>
-
         <div class="tags">
-
           <span class="tag">Monday.com</span>
           <span class="tag">GoHighLevel</span>
           <span class="tag">Trello</span>
           <span class="tag">Asana</span>
           <span class="tag">CRM Management</span>
           <span class="tag">Pipeline Management</span>
-
         </div>
-
       </div>
 
-
       <div class="tool-category">
-
         <h3>AI & Automation</h3>
-
         <div class="tags">
-
           <span class="tag">ChatGPT</span>
           <span class="tag">Claude</span>
           <span class="tag">Gemini</span>
           <span class="tag">Prompt Engineering</span>
           <span class="tag">Workflow Support</span>
           <span class="tag">AI Research</span>
-
         </div>
-
       </div>
 
-
       <div class="tool-category">
-
         <h3>Productivity & Digital</h3>
-
         <div class="tags">
-
           <span class="tag">Google Workspace</span>
           <span class="tag">Microsoft 365</span>
           <span class="tag">Excel</span>
@@ -1218,26 +1052,19 @@
           <span class="tag">Zoom</span>
           <span class="tag">Canva</span>
           <span class="tag">GitHub</span>
-
         </div>
-
       </div>
 
     </div>
-
   </div>
 </section>
-
 
 <!-- CONTACT -->
 
 <section class="contact" id="contact">
-
   <div class="container">
 
-    <div class="eyebrow">
-      Let's Talk
-    </div>
+    <div class="eyebrow">Let's Talk</div>
 
     <h2 class="section-title">
       Tell me what needs<br>
@@ -1252,21 +1079,18 @@
     </p>
 
     <a
-      href="mailto:liz.lorico@gmail.com"
+      href="mailto:liezljamindang@gmail.com"
       class="contact-button"
     >
       Send Me a Message
     </a>
 
   </div>
-
 </section>
-
 
 <footer>
   © 2026 Liezl L. Jamindang · Executive Virtual Assistant · Executive Assistant · Operations Support
 </footer>
-
 
 </body>
 </html>
