@@ -1,1829 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Liezl Jamindang | Executive Virtual Assistant & Operations Support</title>
-
-  <meta
-    name="description"
-    content="Executive Virtual Assistant and Operations Support professional helping founders and executives manage priorities, projects, deadlines, follow-ups, CRM, research, and AI-powered workflows."
-  />
-
-  <meta
-    name="keywords"
-    content="Executive Virtual Assistant, Executive Assistant, Virtual Assistant, Administrative Assistant, Operations Assistant, Operations Support, Project Management, Administrative Support, Monday.com, GoHighLevel, CRM Management, AI Automation, Remote Virtual Assistant"
-  />
-
-  <style>
-    :root {
-      --dark: #1d1728;
-      --dark-2: #261e33;
-      --cream: #f6f0e6;
-      --text: #f8f5ef;
-      --muted: #bdb5c7;
-      --ink: #241c2e;
-      --teal: #35e0c0;
-      --line: rgba(255,255,255,.10);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--dark);
-      color: var(--text);
-      line-height: 1.7;
-    }
-
-    h1, h2, h3 {
-      font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.08;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(1160px, 88%);
-      margin: auto;
-    }
-
-    .eyebrow {
-      color: var(--teal);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: .8rem;
-      margin-bottom: 18px;
-    }
-
-    .accent {
-      color: var(--teal);
-      font-style: italic;
-    }
-
-    /* NAV */
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(29, 23, 40, .96);
-      border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(14px);
-    }
-
-    .nav-inner {
-      min-height: 78px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 30px;
-    }
-
-    .logo {
-      font-family: Georgia, serif;
-      font-size: 1.3rem;
-      font-weight: bold;
-    }
-
-    .logo span {
-      color: var(--teal);
-      font-style: italic;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-      font-size: .82rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-    }
-
-    .nav-links a:hover {
-      color: var(--teal);
-    }
-
-    .nav-button {
-      background: var(--teal);
-      color: var(--ink) !important;
-      padding: 13px 22px;
-      border-radius: 6px;
-      font-weight: 700;
-    }
-
-    /* HERO */
-
-    .hero {
-      min-height: 720px;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .hero:before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(53,224,192,.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(53,224,192,.035) 1px, transparent 1px);
-      background-size: 110px 110px;
-      pointer-events: none;
-    }
-
-    .hero-content {
-      max-width: 800px;
-      position: relative;
-      z-index: 2;
-      padding: 100px 0;
-    }
-
-    .hero h1 {
-      font-size: clamp(3.4rem, 7vw, 6.2rem);
-      margin-bottom: 28px;
-    }
-
-    .hero-text {
-      max-width: 720px;
-      color: var(--muted);
-      font-size: 1.18rem;
-      margin-bottom: 34px;
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 55px;
-    }
-
-    .btn-primary,
-    .btn-secondary {
-      padding: 15px 25px;
-      border-radius: 6px;
-      font-weight: 700;
-      text-transform: uppercase;
-      font-size: .82rem;
-      letter-spacing: 1px;
-    }
-
-    .btn-primary {
-      background: var(--teal);
-      color: var(--ink);
-    }
-
-    .btn-secondary {
-      border: 1px solid rgba(255,255,255,.5);
-    }
-
-    .stats {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 70px;
-      border-top: 1px solid var(--line);
-      padding-top: 28px;
-    }
-
-    .stat strong {
-      font-family: Georgia, serif;
-      display: block;
-      font-size: 2rem;
-    }
-
-    .stat span {
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-size: .73rem;
-    }
-
-    /* SECTIONS */
-
-    .light {
-      background: var(--cream);
-      color: var(--ink);
-    }
-
-    section {
-      padding: 110px 0;
-    }
-
-    .section-title {
-      font-size: clamp(2.5rem, 5vw, 4.4rem);
-      margin-bottom: 30px;
-    }
-
-    /* ABOUT */
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: .8fr 1.5fr;
-      gap: 80px;
-      align-items: start;
-    }
-
-    .profile-photo-wrap {
-      position: relative;
-      overflow: hidden;
-      background: var(--dark);
-      border-radius: 18px;
-      min-height: 440px;
-      box-shadow: 0 24px 55px rgba(24,18,34,.15);
-    }
-
-    .profile-photo {
-      width: 100%;
-      height: 440px;
-      display: block;
-      object-fit: cover;
-      object-position: center top;
-    }
-
-    .profile-caption {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      padding: 60px 24px 22px;
-      background: linear-gradient(
-        to top,
-        rgba(29,23,40,.98),
-        rgba(29,23,40,.72),
-        transparent
-      );
-      color: white;
-    }
-
-    .profile-caption strong {
-      display: block;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.15rem;
-      margin-bottom: 5px;
-    }
-
-    .profile-caption span {
-      display: block;
-      color: var(--teal);
-      font-size: .72rem;
-      line-height: 1.5;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
-    .about-text p {
-      margin-bottom: 18px;
-      font-size: 1.06rem;
-    }
-
-    .pillars {
-      margin-top: 50px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .pillar {
-      border-top: 2px solid var(--ink);
-      padding-top: 20px;
-    }
-
-    .pillar h3 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-    }
-
-    .pillar p {
-      color: #71697b;
-      font-size: .95rem;
-    }
-
-    /* SERVICES */
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 50px;
-    }
-
-    .service-card {
-      padding: 38px 32px;
-      background: var(--dark-2);
-      border: 1px solid rgba(53,224,192,.25);
-      border-radius: 15px;
-    }
-
-    .service-number {
-      color: var(--teal);
-      margin-bottom: 16px;
-      font-family: monospace;
-    }
-
-    .service-card h3 {
-      font-size: 1.6rem;
-      margin-bottom: 16px;
-    }
-
-    .service-card p {
-      color: var(--muted);
-      margin-bottom: 20px;
-    }
-
-    .service-card ul {
-      list-style: none;
-    }
-
-    .service-card li {
-      margin: 9px 0;
-      color: #ded8e5;
-    }
-
-    .service-card li:before {
-      content: "•";
-      color: var(--teal);
-      margin-right: 12px;
-    }
-
-    /* WORK */
-
-    .case-study {
-      margin-top: 50px;
-      background: var(--dark);
-      color: var(--text);
-      padding: 55px;
-      border-radius: 18px;
-    }
-
-    .case-study h3 {
-      font-size: 2.4rem;
-      margin-bottom: 20px;
-    }
-
-    .case-study > p {
-      color: var(--muted);
-      max-width: 760px;
-    }
-
-    .case-columns {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    .case-box {
-      border-top: 1px solid rgba(255,255,255,.25);
-      padding-top: 20px;
-    }
-
-    .case-box h4 {
-      color: var(--teal);
-      margin-bottom: 12px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-size: .82rem;
-    }
-
-    .case-box p,
-    .case-box li {
-      color: var(--muted);
-    }
-
-    .case-box ul {
-      list-style: none;
-    }
-
-    .case-box li {
-      margin: 6px 0;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-      margin-top: 30px;
-    }
-
-    .project {
-      border: 1px solid #d7cdbd;
-      padding: 30px;
-      border-radius: 12px;
-    }
-
-    .project small {
-      color: #159d88;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .project h3 {
-      margin: 14px 0 10px;
-      font-size: 1.5rem;
-    }
-
-    /* EXPERIENCE */
-
-    .timeline {
-      max-width: 900px;
-      margin-top: 55px;
-      border-left: 1px solid rgba(53,224,192,.35);
-      padding-left: 35px;
-    }
-
-    .job {
-      position: relative;
-      padding-bottom: 45px;
-    }
-
-    .job:before {
-      content: "";
-      width: 12px;
-      height: 12px;
-      background: var(--teal);
-      border-radius: 50%;
-      position: absolute;
-      left: -42px;
-      top: 8px;
-    }
-
-    .job .date {
-      color: var(--teal);
-      font-family: monospace;
-      margin-bottom: 8px;
-    }
-
-    .job h3 {
-      font-size: 1.45rem;
-      margin-bottom: 6px;
-    }
-
-    .job .company {
-      color: var(--muted);
-      font-style: italic;
-      margin-bottom: 10px;
-    }
-
-    .job p:last-child {
-      color: #d6d0dd;
-    }
-
-    /* TOOLKIT */
-
-    .tool-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 45px;
-      margin-top: 45px;
-    }
-
-    .tool-category h3 {
-      margin-bottom: 18px;
-      font-family: monospace;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .tags {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .tag {
-      padding: 10px 16px;
-      border: 1px solid #d7cdbd;
-      border-radius: 999px;
-      font-size: .9rem;
-    }
-
-    /* CONTACT */
-
-    .contact {
-      text-align: center;
-    }
-
-    .contact p {
-      color: var(--muted);
-      max-width: 720px;
-      margin: 0 auto 30px;
-      font-size: 1.05rem;
-    }
-
-    .contact-button {
-      display: inline-block;
-      background: var(--teal);
-      color: var(--ink);
-      padding: 16px 30px;
-      border-radius: 6px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    footer {
-      padding: 30px;
-      text-align: center;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: .85rem;
-    }
-
-    @media(max-width: 850px) {
-      .nav-links a:not(.nav-button) {
-        display: none;
-      }
-
-      .about-grid,
-      .service-grid,
-      .case-columns,
-      .projects,
-      .tool-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .pillars {
-        grid-template-columns: 1fr;
-      }
-
-      .stats {
-        gap: 30px;
-      }
-
-      .case-study {
-        padding: 35px 25px;
-      }
-
-      .profile-photo-wrap {
-        min-height: 380px;
-      }
-
-      .profile-photo {
-        height: 380px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liezl Jamindang | Executive Virtual Assistant</title>
+<meta name="description" content="Liezl Jamindang, Executive Virtual Assistant with 10+ years across administrative support, business operations, and AI-powered workflows. Remote, available now.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-<nav>
-  <div class="container nav-inner">
-    <a href="#home" class="logo">
-      Liezl <span>Jamindang</span>
-    </a>
-
-    <div class="nav-links">
+<!-- ============ NAV ============ -->
+<header class="site-header">
+  <div class="header-pattern" aria-hidden="true"></div>
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">Liezl <em>Jamindang</em></a>
+    <nav class="main-nav" id="mainNav">
       <a href="#about">About</a>
       <a href="#services">Services</a>
-      <a href="#work">Work</a>
       <a href="#experience">Experience</a>
-      <a href="#contact" class="nav-button">Let's Talk</a>
-    </div>
+      <a href="#contact" class="nav-cta">Let's Connect</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
   </div>
-</nav>
+</header>
 
-<section class="hero" id="home">
-  <div class="container">
-    <div class="hero-content">
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">Available Now &middot; Remote &middot; Part-Time or Full-Time</p>
+      <h1>Order, elegance, <span class="accent">and everything handled.</span></h1>
+      <p class="hero-sub">I help busy executives and founders stay organized, keep priorities moving, and make sure nothing important falls through the cracks. 10+ years across operations, administration, and client support, paired with AI and automation to work smarter.</p>
 
-      <div class="eyebrow">
-        Available Now · Part-Time or Full-Time
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Work With Me</a>
+        <a href="#experience" class="btn btn-outline">See My Work</a>
       </div>
 
-      <h1>
-        Executive support.<br>
-        <span class="accent">Powered by smarter tools.</span>
-      </h1>
+      <ul class="hero-stats">
+        <li><strong>10+</strong><span>Years in Ops &amp; Support</span></li>
+        <li><strong>7</strong><span>Years Business Operations</span></li>
+        <li><strong>AI-Savvy</strong><span>Tech-Forward Support</span></li>
+      </ul>
+    </div>
 
-      <p class="hero-text">
-        I help busy founders and executives stay organized, keep priorities
-        moving, and make sure important work doesn't fall through the cracks.
-        With 10+ years of experience across operations, administration, and
-        client support, I combine reliable executive assistance with AI,
-        automation, research, and digital tools to work smarter and keep
-        operations moving.
-      </p>
-
-      <div class="buttons">
-        <a href="#contact" class="btn-primary">Work With Me</a>
-
-        <a href="resume.pdf" target="_blank" class="btn-secondary">
-          Download Resume
-        </a>
-
-        <a href="#work" class="btn-secondary">See My Work</a>
+    <div class="hero-visual">
+      <div class="planner-card" aria-hidden="true">
+        <div class="planner-ribbon"></div>
+        <div class="planner-head">
+          <span class="planner-eyebrow">Today's Priorities</span>
+          <span class="planner-date" id="plannerDate"></span>
+        </div>
+        <ul class="planner-list" id="plannerList">
+          <li><span class="planner-check"></span><span class="planner-text">Confirm the 9am with the board</span></li>
+          <li><span class="planner-check"></span><span class="planner-text">Reconcile this week's invoices</span></li>
+          <li><span class="planner-check"></span><span class="planner-text">Send follow-up to three open leads</span></li>
+          <li><span class="planner-check"></span><span class="planner-text">Draft tomorrow's executive brief</span></li>
+        </ul>
+        <div class="planner-seal">LJ</div>
       </div>
-
-      <div class="stats">
-        <div class="stat">
-          <strong>10+</strong>
-          <span>Years in Ops & Support</span>
-        </div>
-
-        <div class="stat">
-          <strong>7</strong>
-          <span>Years Business Operations</span>
-        </div>
-
-        <div class="stat">
-          <strong>AI + Automation</strong>
-          <span>Tech-Savvy Support</span>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
-
-<section class="light" id="about">
-  <div class="container">
-    <div class="about-grid">
-
-      <div class="profile-photo-wrap">
-        <img
-          src="assets/Profile%20Picture.png"
-          alt="Liezl Jamindang"
-          class="profile-photo"
-        >
-
-        <div class="profile-caption">
-          <strong>Liezl J. Jamindang</strong>
-          <span>Executive Assistant · Operations Support · AI-Savvy VA</span>
-        </div>
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="wrap about-inner">
+    <div class="about-portrait">
+      <div class="portrait-frame">
+        <span class="portrait-initials">LJ</span>
       </div>
+      <p class="portrait-caption">Liezl J. Jamindang<br><span>Executive Assistant &middot; Operations Support</span></p>
+    </div>
 
-      <div class="about-text">
+    <div class="about-copy">
+      <p class="eyebrow">About</p>
+      <h2>Built on operations, <em>enhanced by smarter tools.</em></h2>
+      <p>My background started in operations, long before I became a Virtual Assistant. For 7 years I ran my own business and handled the details that keep things moving: customers, suppliers, scheduling, orders, payments, inventory, and daily problem-solving.</p>
+      <p>Today I bring that same ownership mindset to executive support. I manage priorities, track deadlines and follow-ups, organize information, maintain pipelines, prepare executive updates, and flag issues before they become bigger problems, using AI, automation, and CRM tools along the way while keeping human judgment at the center.</p>
 
-        <div class="eyebrow">About</div>
-
-        <h2 class="section-title">
-          Built on operations.
-          <span class="accent">Enhanced by smarter tools.</span>
-        </h2>
-
-        <p>
-          My background started in operations, long before I became a Virtual
-          Assistant. For 7 years, I ran my own business and handled the details
-          that keep a business moving: customers, suppliers, scheduling,
-          orders, payments, inventory, documentation, and daily problem-solving.
-        </p>
-
-        <p>
-          Today, I bring that same ownership mindset to executive support.
-          I manage priorities, track deadlines and follow-ups, organize
-          information, maintain task and opportunity pipelines, prepare
-          executive updates, and flag issues before they become bigger problems.
-        </p>
-
-        <p>
-          I'm also comfortable with AI, automation, CRM systems, and digital
-          tools. I use technology to research faster, organize information,
-          improve workflows, and reduce repetitive work while keeping human
-          judgment at the center.
-        </p>
-
-        <div class="pillars">
-
-          <div class="pillar">
-            <h3>Executive Support</h3>
-            <p>
-              Inbox, calendars, priorities, research, documentation, and
-              follow-ups handled with care.
-            </p>
-          </div>
-
-          <div class="pillar">
-            <h3>Operations Mindset</h3>
-            <p>
-              Deadlines, task ownership, pipelines, blockers, and next actions
-              kept visible and moving.
-            </p>
-          </div>
-
-          <div class="pillar">
-            <h3>Tech-Savvy Execution</h3>
-            <p>
-              AI, automation, CRM, and digital tools used to improve speed,
-              organization, and consistency.
-            </p>
-          </div>
-
+      <div class="pillars">
+        <div class="pillar">
+          <h3>Executive Support</h3>
+          <p>Inbox, calendars, priorities, research, and follow-ups handled with care.</p>
+        </div>
+        <div class="pillar">
+          <h3>Operations Mindset</h3>
+          <p>Deadlines, ownership, pipelines, and next actions kept visible and moving.</p>
+        </div>
+        <div class="pillar">
+          <h3>Tech-Savvy Execution</h3>
+          <p>AI, automation, and digital tools used to improve speed and consistency.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
-
-<section id="services">
-  <div class="container">
-
-    <div class="eyebrow">What I Do</div>
-
-    <h2 class="section-title">
-      The support behind<br>
-      smoother operations.
-    </h2>
+<!-- ============ SERVICES ============ -->
+<section class="services" id="services">
+  <div class="wrap">
+    <p class="eyebrow eyebrow-light">What I Do</p>
+    <h2>The support behind smoother operations.</h2>
 
     <div class="service-grid">
-
-      <div class="service-card">
-        <div class="service-number">01</div>
-        <h3>Executive & Administrative Support</h3>
-        <p>
-          Reliable day-to-day support that helps executives stay focused on
-          higher-value priorities.
-        </p>
+      <article class="service-card">
+        <span class="service-index">01</span>
+        <h3>Executive &amp; Administrative Support</h3>
+        <p>Reliable day-to-day support that helps executives stay focused on higher-value priorities.</p>
         <ul>
-          <li>Inbox & email management</li>
-          <li>Calendar & scheduling</li>
-          <li>Meeting preparation & follow-up</li>
-          <li>Research & document preparation</li>
-          <li>File & information organization</li>
+          <li>Inbox &amp; email management</li>
+          <li>Calendar &amp; scheduling</li>
+          <li>Meeting preparation &amp; follow-up</li>
+          <li>Research &amp; document preparation</li>
           <li>Confidential administrative support</li>
         </ul>
-      </div>
+      </article>
 
-      <div class="service-card">
-        <div class="service-number">02</div>
-        <h3>Operations & Project Support</h3>
-        <p>
-          Keeping priorities, deadlines, ownership, and next actions visible
-          so important work continues moving.
-        </p>
+      <article class="service-card service-card-accent">
+        <span class="service-index">02</span>
+        <h3>Operations &amp; Project Support</h3>
+        <p>Keeping priorities, deadlines, ownership, and next actions visible so important work keeps moving.</p>
         <ul>
-          <li>Task & deadline tracking</li>
+          <li>Task &amp; deadline tracking</li>
           <li>Monday.com board management</li>
-          <li>Opportunity & pipeline tracking</li>
-          <li>Ownership & next-action monitoring</li>
+          <li>Opportunity &amp; pipeline tracking</li>
           <li>Executive status updates</li>
-          <li>SOP & process documentation</li>
+          <li>SOP &amp; process documentation</li>
         </ul>
-      </div>
+      </article>
 
-      <div class="service-card">
-        <div class="service-number">03</div>
-        <h3>AI, Automation & Digital Support</h3>
-        <p>
-          Using modern tools to reduce repetitive work, organize information,
-          and support more efficient workflows.
-        </p>
+      <article class="service-card">
+        <span class="service-index">03</span>
+        <h3>AI, Automation &amp; Digital Support</h3>
+        <p>Using modern tools to reduce repetitive work and support more efficient workflows.</p>
         <ul>
           <li>AI-assisted research</li>
           <li>Prompt engineering</li>
-          <li>GoHighLevel & CRM support</li>
-          <li>Workflow & automation support</li>
-          <li>Data organization</li>
-          <li>Website & digital tool support</li>
+          <li>GoHighLevel &amp; CRM support</li>
+          <li>Workflow &amp; automation support</li>
+          <li>Website &amp; digital tool support</li>
         </ul>
-      </div>
-
+      </article>
     </div>
   </div>
 </section>
 
-<!-- WORK -->
-
-<section class="light" id="work">
-  <div class="container">
-
-    <div class="eyebrow">Selected Work</div>
-
-    <h2 class="section-title">
-      Work that creates
-      <span class="accent">clarity and momentum.</span>
-    </h2>
-
-    <div class="case-study">
-
-      <div class="eyebrow">Executive Operations</div>
-
-      <h3>
-        Turning a busy opportunity pipeline into clear next actions.
-      </h3>
-
-      <p>
-        Supporting an executive operations environment where multiple active
-        opportunities required clear ownership, deadline tracking, follow-ups,
-        documentation, and escalation awareness.
-      </p>
-
-      <div class="case-columns">
-
-        <div class="case-box">
-          <h4>The Challenge</h4>
-          <p>
-            Multiple opportunities were moving at different stages. Missing a
-            deadline, follow-up, or next action could allow an opportunity to
-            quietly stall.
-          </p>
-        </div>
-
-        <div class="case-box">
-          <h4>What I Did</h4>
-          <p>
-            Audited pipeline records in Monday.com, reviewed ownership and
-            next actions, identified missing information and blockers,
-            monitored follow-up windows, and prepared executive-level updates.
-          </p>
-        </div>
-
-        <div class="case-box">
-          <h4>What I Delivered</h4>
-          <ul>
-            <li>✓ Clear task ownership</li>
-            <li>✓ Specific next actions</li>
-            <li>✓ Deadline visibility</li>
-            <li>✓ Blocker identification</li>
-            <li>✓ Executive Control Briefs</li>
-            <li>✓ Follow-up tracking</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="projects">
-
-      <div class="project">
-        <small>Executive Operations</small>
-        <h3>Pipeline Audit & Executive Brief</h3>
-        <p>
-          A sanitized demonstration of how I organize ownership, deadlines,
-          blockers, next actions, and executive-level reporting.
-        </p>
-      </div>
-
-      <div class="project">
-        <small>CRM & Automation</small>
-        <h3>GoHighLevel Lead Follow-Up Workflow</h3>
-        <p>
-          CRM and workflow support designed to keep leads organized, improve
-          follow-up consistency, and reduce missed opportunities.
-        </p>
-      </div>
-
-      <div class="project">
-        <small>Web & Digital Operations</small>
-        <h3>Business Website & Digital Workflow</h3>
-        <p>
-          Website and digital project work showing my ability to learn new
-          systems, organize requirements, troubleshoot, and ship working
-          solutions.
-        </p>
-      </div>
-
-    </div>
+<!-- ============ EXPERIENCE (horizontal panning) ============ -->
+<section class="experience" id="experience">
+  <div class="wrap experience-head">
+    <p class="eyebrow">Experience</p>
+    <h2>A track record built one role at a time.</h2>
+    <p class="experience-hint">Drag, swipe, or use the arrows to pan through &rarr;</p>
   </div>
-</section>
 
-<!-- EXPERIENCE -->
-
-<section id="experience">
-  <div class="container">
-
-    <div class="eyebrow">Experience</div>
-
-    <h2 class="section-title">
-      A track record built<br>
-      one role at a time.
-    </h2>
-
-    <div class="timeline">
-
-      <div class="job">
-        <div class="date">2026 - Present</div>
+  <div class="experience-rail-wrap">
+    <button class="rail-arrow rail-arrow-prev" id="railPrev" type="button" aria-label="Previous role">&#10094;</button>
+    <div class="experience-rail" id="experienceRail">
+      <article class="role-card">
+        <span class="role-date">August 2026 &ndash; Present</span>
         <h3>Executive Operations Assistant</h3>
-        <div class="company">
-          Confidential Client · Healthcare Services · Remote
-        </div>
-        <p>
-          Support executive operations through opportunity pipeline
-          management, deadline and follow-up tracking, Monday.com board
-          auditing, blocker identification, next-action monitoring,
-          documentation, and executive-level reporting.
-        </p>
-      </div>
-
-      <div class="job">
-        <div class="date">2025 - 2026</div>
+        <p class="role-org">Confidential Client &middot; Healthcare Services &middot; Part-Time, Remote</p>
+        <p>Provide operational support across 3 strategic business development areas, auditing opportunity pipelines in Monday.com and preparing executive control briefs on priorities, risks, and next actions.</p>
+      </article>
+      <article class="role-card">
+        <span class="role-date">Nov 2025 &ndash; Apr 2026</span>
         <h3>Executive Virtual Assistant</h3>
-        <div class="company">
-          Confidential Client · Automation Engineer / Hospital & Clinic Clients
-        </div>
-        <p>
-          Managed executive inboxes, calendars, scheduling across time zones,
-          research, documentation, reports, project support, and confidential
-          administrative information.
-        </p>
-      </div>
-
-      <div class="job">
-        <div class="date">2025</div>
+        <p class="role-org">Confidential Client &middot; Automation Engineer, Hospital &amp; Clinic Clients &middot; Project-Based, Remote</p>
+        <p>Provided part-time support to 2 executives, managing inboxes and calendars across time zones, tracking project deadlines, and turning research into actionable briefs.</p>
+      </article>
+      <article class="role-card">
+        <span class="role-date">Oct &ndash; Dec 2025</span>
         <h3>Instagram Lead Generation Specialist</h3>
-        <div class="company">
-          Confidential Client · Online Fitness Coaching
-        </div>
-        <p>
-          Supported prospect engagement, lead qualification, data collection,
-          outreach, and follow-up activities for an online coaching sales pipeline.
-        </p>
-      </div>
-
-      <div class="job">
-        <div class="date">2018 - 2025</div>
-        <h3>Business Owner & Operations Manager</h3>
-        <div class="company">Kirzel's Sweet Tooth & Prints</div>
-        <p>
-          Managed daily operations end to end including customers, suppliers,
-          scheduling, orders, payments, inventory, documentation, SOPs,
-          workflows, and customer service.
-        </p>
-      </div>
-
-      <div class="job">
-        <div class="date">2016 - 2018</div>
+        <p class="role-org">Confidential Client &middot; Online Fitness Coaching Business &middot; Project-Based, Remote</p>
+        <p>Generated 3 qualified leads during a 20-hour weekend coverage assignment through personalized prospect engagement and pipeline organization.</p>
+      </article>
+      <article class="role-card">
+        <span class="role-date">2018 &ndash; 2025</span>
+        <h3>Business Owner &amp; Operations Manager</h3>
+        <p class="role-org">Kirzel's Sweet Tooth &amp; Prints &middot; Full-Time</p>
+        <p>Ran daily operations for 7 years: coordinated 50&ndash;100 party-order events, managed thrift-clothing inventory (~3 bales/month) and 40&ndash;50 monthly rolled-ice-cream orders, and built the SOPs that kept it all consistent.</p>
+      </article>
+      <article class="role-card">
+        <span class="role-date">2016 &ndash; 2018</span>
         <h3>Campaign Manager</h3>
-        <div class="company">
-          Voiceless Technologies Philippines, Inc.
-        </div>
-        <p>
-          Managed campaign coordination, client communications, KPI tracking,
-          stakeholder reporting, and team performance support.
-        </p>
-      </div>
-
-      <div class="job">
-        <div class="date">2014 - 2016</div>
+        <p class="role-org">Voiceless Technologies Philippines, Inc. &middot; Full-Time</p>
+        <p>Managed operations across 5 simultaneous campaigns supporting about 75 agents total, serving as primary client liaison and tracking KPIs for stakeholder reporting.</p>
+      </article>
+      <article class="role-card">
+        <span class="role-date">2014 &ndash; 2016</span>
         <h3>Quality Assurance Specialist</h3>
-        <div class="company">
-          Voiceless Technologies Philippines, Inc.
-        </div>
-        <p>
-          Conducted quality audits, call monitoring, calibration, process
-          documentation, and performance improvement support.
-        </p>
-      </div>
-
+        <p class="role-org">Voiceless Technologies Philippines, Inc. &middot; Full-Time</p>
+        <p>Audited an average of 30 customer calls per day for quality and compliance, documenting findings and supporting coaching through calibration sessions.</p>
+      </article>
     </div>
+    <button class="rail-arrow rail-arrow-next" id="railNext" type="button" aria-label="Next role">&#10095;</button>
   </div>
+
+  <div class="rail-dots" id="railDots"></div>
 </section>
 
-<!-- TOOLKIT -->
+<!-- ============ TOOLKIT ============ -->
+<section class="toolkit">
+  <div class="wrap">
+    <p class="eyebrow eyebrow-light">Toolkit</p>
+    <h2>What I actually work in.</h2>
 
-<section class="light">
-  <div class="container">
-
-    <div class="eyebrow">Toolkit</div>
-
-    <h2 class="section-title">
-      What I actually work in.
-    </h2>
-
-    <div class="tool-grid">
-
-      <div class="tool-category">
-        <h3>Executive & Operations</h3>
-        <div class="tags">
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3>Executive &amp; Operations</h3>
+        <div class="tag-row">
           <span class="tag">Inbox Management</span>
-          <span class="tag">Calendar & Scheduling</span>
-          <span class="tag">Project Management</span>
-          <span class="tag">Deadline Tracking</span>
-          <span class="tag">Research</span>
-          <span class="tag">Documentation</span>
-          <span class="tag">SOPs</span>
-          <span class="tag">Executive Reporting</span>
+          <span class="tag">Calendar &amp; Scheduling</span>
+          <span class="tag">Deadline &amp; Follow-Up Tracking</span>
+          <span class="tag">Executive Briefs &amp; Reporting</span>
+          <span class="tag">SOP &amp; Process Docs</span>
+          <span class="tag">Confidential Info Handling</span>
         </div>
       </div>
-
-      <div class="tool-category">
-        <h3>Project & CRM</h3>
-        <div class="tags">
+      <div class="skill-group">
+        <h3>Project &amp; CRM</h3>
+        <div class="tag-row">
           <span class="tag">Monday.com</span>
           <span class="tag">GoHighLevel</span>
           <span class="tag">Trello</span>
           <span class="tag">Asana</span>
-          <span class="tag">CRM Management</span>
-          <span class="tag">Pipeline Management</span>
+          <span class="tag">Lead Gen &amp; Prospect Research</span>
         </div>
       </div>
-
-      <div class="tool-category">
-        <h3>AI & Automation</h3>
-        <div class="tags">
-          <span class="tag">ChatGPT</span>
-          <span class="tag">Claude</span>
-          <span class="tag">Gemini</span>
+      <div class="skill-group">
+        <h3>AI &amp; Automation</h3>
+        <div class="tag-row">
+          <span class="tag tag-accent">ChatGPT</span>
+          <span class="tag tag-accent">Claude</span>
+          <span class="tag tag-accent">Gemini</span>
           <span class="tag">Prompt Engineering</span>
-          <span class="tag">Workflow Support</span>
-          <span class="tag">AI Research</span>
         </div>
       </div>
-
-      <div class="tool-category">
-        <h3>Productivity & Digital</h3>
-        <div class="tags">
+      <div class="skill-group">
+        <h3>Productivity &amp; Digital</h3>
+        <div class="tag-row">
           <span class="tag">Google Workspace</span>
           <span class="tag">Microsoft 365</span>
-          <span class="tag">Excel</span>
-          <span class="tag">Slack</span>
-          <span class="tag">Zoom</span>
+          <span class="tag">Slack &amp; Zoom</span>
           <span class="tag">Canva</span>
-          <span class="tag">GitHub</span>
+          <span class="tag">Google Sheets &amp; Data Entry</span>
         </div>
       </div>
+    </div>
 
+    <div class="credentials">
+      <div class="credentials-col">
+        <h3>Certifications</h3>
+        <ul>
+          <li>Executive Assistant Masterclass, Virtual Work Ph <span>&middot; June 2023</span></li>
+          <li>Funnel Mastery, Funnel Mastery Academy <span>&middot; October 2025</span></li>
+        </ul>
+      </div>
+      <div class="credentials-col">
+        <h3>Education</h3>
+        <ul>
+          <li>BS in Information &amp; Technology <span>&middot; St. Scholastica's College, Philippines, 2008&ndash;2010</span></li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-
+<!-- ============ CONTACT ============ -->
 <section class="contact" id="contact">
-  <div class="container contact-card">
+  <div class="wrap">
+    <p class="eyebrow">Let's Talk</p>
+    <h2>Tell me what needs to get done.</h2>
 
-    <div class="eyebrow">Let's Talk</div>
+    <div class="contact-card">
+      <div class="contact-card-copy">
+        <p>Whether it's managing executive priorities, keeping operations organized, or tracking projects and follow-ups, tell me what needs attention below.</p>
 
-    <h2 class="section-title">
-      Tell me what needs<br>
-      to get done.
-    </h2>
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <label for="cfName">Your name</label>
+            <input type="text" id="cfName" name="name" required autocomplete="name">
+          </div>
+          <div class="form-row">
+            <label for="cfEmail">Your email</label>
+            <input type="email" id="cfEmail" name="email" required autocomplete="email">
+          </div>
+          <div class="form-row form-row-full">
+            <label for="cfMessage">What do you need done?</label>
+            <textarea id="cfMessage" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">Send Message</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
 
-    <p>
-      Whether you need help managing executive priorities, keeping operations
-      organized, tracking projects and follow-ups, researching information, or
-      improving a workflow, tell me what needs attention. I'll help you keep
-      the moving pieces organized.
-    </p>
-
-    <a
-      href="mailto:liezljamindang@gmail.com"
-      class="contact-button"
-    >
-      Send Me a Message
-    </a>
-
+      <div class="contact-card-details">
+        <div class="contact-detail">
+          <span class="contact-label">Email</span>
+          <a href="mailto:liezljamindang@gmail.com">liezljamindang@gmail.com</a>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-label">Phone</span>
+          <a href="tel:+639612436318">+63 961 243 6318</a>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-label">Location</span>
+          <span>Philippines &middot; Remote worldwide</span>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-label">LinkedIn</span>
+          <a href="#" id="linkedinLink">Connect with me</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<footer>
-  © 2026 Liezl L. Jamindang · Executive Virtual Assistant · Executive Assistant · Operations Support
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span class="footer-brand">Liezl Jamindang</span>
+    <p class="footer-copy">&copy; <span id="year"></span> Liezl Jamindang &middot; Executive Virtual Assistant &middot; Philippines</p>
+  </div>
 </footer>
 
-<!-- =========================================
-     PORTFOLIO MOTION
-========================================= -->
-
-<style>
-
-/* -----------------------------------------
-   SCROLL REVEAL
------------------------------------------ */
-
-.motion-reveal {
-  opacity: 0;
-  transform: translateY(38px);
-  transition:
-    opacity 0.8s cubic-bezier(.2,.7,.2,1),
-    transform 0.8s cubic-bezier(.2,.7,.2,1);
-  will-change: opacity, transform;
-}
-
-.motion-reveal.motion-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-/* -----------------------------------------
-   HERO ENTRANCE
------------------------------------------ */
-
-.hero .eyebrow {
-  animation: heroFadeUp 0.7s ease forwards;
-}
-
-.hero h1 {
-  opacity: 0;
-  animation: heroFadeUp 0.8s ease 0.15s forwards;
-}
-
-.hero-text {
-  opacity: 0;
-  animation: heroFadeUp 0.8s ease 0.3s forwards;
-}
-
-.hero .buttons {
-  opacity: 0;
-  animation: heroFadeUp 0.8s ease 0.45s forwards;
-}
-
-.hero .stats {
-  opacity: 0;
-  animation: heroFadeUp 0.8s ease 0.6s forwards;
-}
-
-@keyframes heroFadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(28px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-/* -----------------------------------------
-   TEAL HEADLINE MOTION
------------------------------------------ */
-
-.hero .accent {
-  display: inline-block;
-  animation: accentFloat 5s ease-in-out infinite;
-}
-
-@keyframes accentFloat {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
-
-/* -----------------------------------------
-   PROFILE PHOTO
------------------------------------------ */
-
-.profile-photo-wrap {
-  transition:
-    transform 0.45s cubic-bezier(.2,.7,.2,1),
-    box-shadow 0.45s ease;
-}
-
-.profile-photo {
-  transition:
-    transform 0.75s cubic-bezier(.2,.7,.2,1);
-}
-
-.profile-photo-wrap:hover {
-  transform: translateY(-8px);
-  box-shadow:
-    0 32px 70px rgba(24,18,34,.24);
-}
-
-.profile-photo-wrap:hover .profile-photo {
-  transform: scale(1.035);
-}
-
-
-/* -----------------------------------------
-   PROFILE CAPTION
------------------------------------------ */
-
-.profile-caption {
-  transition:
-    padding-bottom 0.4s ease,
-    background 0.4s ease;
-}
-
-.profile-photo-wrap:hover .profile-caption {
-  padding-bottom: 28px;
-}
-
-
-/* -----------------------------------------
-   SERVICE CARDS
------------------------------------------ */
-
-.service-card {
-  position: relative;
-  overflow: hidden;
-
-  transition:
-    transform 0.35s cubic-bezier(.2,.7,.2,1),
-    border-color 0.35s ease,
-    box-shadow 0.35s ease;
-}
-
-.service-card::after {
-  content: "";
-  position: absolute;
-
-  left: 0;
-  bottom: 0;
-
-  width: 0;
-  height: 3px;
-
-  background: var(--teal);
-
-  transition: width 0.4s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-9px);
-
-  border-color: rgba(53,224,192,.75);
-
-  box-shadow:
-    0 24px 48px rgba(0,0,0,.20);
-}
-
-.service-card:hover::after {
-  width: 100%;
-}
-
-
-/* -----------------------------------------
-   PROJECT CARDS
------------------------------------------ */
-
-.project {
-  transition:
-    transform 0.35s cubic-bezier(.2,.7,.2,1),
-    border-color 0.35s ease,
-    box-shadow 0.35s ease;
-}
-
-.project:hover {
-  transform: translateY(-7px);
-
-  border-color: var(--teal);
-
-  box-shadow:
-    0 18px 38px rgba(29,23,40,.12);
-}
-
-
-/* -----------------------------------------
-   EXECUTIVE CASE STUDY
------------------------------------------ */
-
-.case-study {
-  transition:
-    transform 0.45s ease,
-    box-shadow 0.45s ease;
-}
-
-.case-study:hover {
-  transform: translateY(-5px);
-
-  box-shadow:
-    0 26px 60px rgba(29,23,40,.18);
-}
-
-
-/* -----------------------------------------
-   CASE STUDY COLUMNS
------------------------------------------ */
-
-.case-box {
-  transition:
-    transform 0.3s ease,
-    border-color 0.3s ease;
-}
-
-.case-box:hover {
-  transform: translateY(-4px);
-
-  border-color: var(--teal);
-}
-
-
-/* -----------------------------------------
-   EXPERIENCE TIMELINE
------------------------------------------ */
-
-.job {
-  transition:
-    transform 0.3s ease;
-}
-
-.job::before {
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.job:hover {
-  transform: translateX(7px);
-}
-
-.job:hover::before {
-  transform: scale(1.55);
-
-  box-shadow:
-    0 0 0 6px rgba(53,224,192,.10),
-    0 0 20px rgba(53,224,192,.55);
-}
-
-
-/* -----------------------------------------
-   TOOL TAGS
------------------------------------------ */
-
-.tag {
-  cursor: default;
-
-  transition:
-    transform 0.25s ease,
-    border-color 0.25s ease,
-    background 0.25s ease;
-}
-
-.tag:hover {
-  transform: translateY(-3px);
-
-  border-color: var(--teal);
-
-  background: rgba(53,224,192,.07);
-}
-
-
-/* -----------------------------------------
-   BUTTON MOTION
------------------------------------------ */
-
-.btn-primary,
-.btn-secondary,
-.nav-button,
-.contact-button {
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    border-color 0.25s ease,
-    color 0.25s ease;
-}
-
-.btn-primary:hover,
-.nav-button:hover,
-.contact-button:hover {
-  transform: translateY(-3px);
-
-  box-shadow:
-    0 12px 28px rgba(53,224,192,.24);
-}
-
-.btn-secondary:hover {
-  transform: translateY(-3px);
-
-  border-color: var(--teal);
-
-  color: var(--teal);
-}
-
-
-/* -----------------------------------------
-   NAVIGATION
------------------------------------------ */
-
-.nav-links > a:not(.nav-button) {
-  position: relative;
-}
-
-.nav-links > a:not(.nav-button)::after {
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-  bottom: -7px;
-
-  width: 0;
-  height: 1px;
-
-  background: var(--teal);
-
-  transition: width 0.3s ease;
-}
-
-.nav-links > a:not(.nav-button):hover::after {
-  width: 100%;
-}
-
-
-/* -----------------------------------------
-   LOGO
------------------------------------------ */
-
-.logo span {
-  display: inline-block;
-
-  transition:
-    transform 0.3s ease;
-}
-
-.logo:hover span {
-  transform: translateX(4px);
-}
-
-
-/* -----------------------------------------
-   SECTION EYEBROWS
------------------------------------------ */
-
-.eyebrow {
-  transition:
-    letter-spacing 0.35s ease;
-}
-
-section:hover > .container > .eyebrow,
-.about-text:hover > .eyebrow {
-  letter-spacing: 2.8px;
-}
-
-
-/* -----------------------------------------
-   MOBILE
------------------------------------------ */
-
-@media (max-width: 850px) {
-
-  .motion-reveal {
-    transform: translateY(24px);
-  }
-
-  .service-card:hover,
-  .project:hover,
-  .case-study:hover,
-  .profile-photo-wrap:hover {
-    transform: none;
-  }
-
-  .job:hover {
-    transform: none;
-  }
-
-}
-
-
-/* -----------------------------------------
-   ACCESSIBILITY
------------------------------------------ */
-
-@media (prefers-reduced-motion: reduce) {
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-
-  .motion-reveal {
-    opacity: 1 !important;
-    transform: none !important;
-  }
-
-}
-
-/* ===============================
-   CONTACT CARD - FINAL
-================================ */
-
-.contact {
-  padding: 100px 24px;
-  background: #1d1728;
-  text-align: center;
-}
-
-.contact-card {
-  max-width: 1050px;
-  margin: 0 auto;
-  padding: 75px 60px;
-
-  background: #261e33;
-
-  border: 1px solid rgba(53, 224, 192, 0.45);
-  border-radius: 22px;
-
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
-
-  position: relative;
-  overflow: hidden;
-
-  transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease,
-    border-color 0.35s ease;
-}
-
-.contact-card::before {
-  content: "";
-  position: absolute;
-
-  top: 0;
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  width: 110px;
-  height: 4px;
-
-  background: #35e0c0;
-
-  border-radius: 0 0 10px 10px;
-}
-
-.contact-card::after {
-  content: "";
-  position: absolute;
-
-  width: 350px;
-  height: 350px;
-
-  top: -230px;
-  right: -130px;
-
-  background: rgba(53, 224, 192, 0.12);
-
-  border-radius: 50%;
-  filter: blur(35px);
-
-  pointer-events: none;
-}
-
-.contact-card > * {
-  position: relative;
-  z-index: 2;
-}
-
-.contact-card:hover {
-  transform: translateY(-7px);
-
-  border-color: rgba(53, 224, 192, 0.75);
-
-  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.45);
-}
-
-@media (max-width: 850px) {
-
-  .contact {
-    padding: 70px 18px;
-  }
-
-  .contact-card {
-    padding: 55px 25px;
-    border-radius: 18px;
-  }
-
-}  
-  
-</style>
-
-
-<script>
-
-document.addEventListener("DOMContentLoaded", function () {
-
-  /* ---------------------------------------
-     SCROLL REVEAL ELEMENTS
-  --------------------------------------- */
-
-  const revealElements = document.querySelectorAll(
-    [
-      ".about-grid",
-      ".service-card",
-      ".case-study",
-      ".project",
-      ".job",
-      ".tool-category",
-      ".contact-card"
-    ].join(",")
-  );
-
-
-  revealElements.forEach(function (element, index) {
-
-    element.classList.add("motion-reveal");
-
-    /*
-      Creates a small stagger between nearby
-      cards without making the page feel slow.
-    */
-
-    element.style.transitionDelay =
-      ((index % 3) * 90) + "ms";
-
-  });
-
-
-  /* ---------------------------------------
-     INTERSECTION OBSERVER
-  --------------------------------------- */
-
-  const revealObserver =
-    new IntersectionObserver(
-
-      function (entries, observer) {
-
-        entries.forEach(function (entry) {
-
-          if (entry.isIntersecting) {
-
-            entry.target.classList.add(
-              "motion-visible"
-            );
-
-            observer.unobserve(
-              entry.target
-            );
-
-          }
-
-        });
-
-      },
-
-      {
-        threshold: 0.12,
-        rootMargin: "0px 0px -30px 0px"
-      }
-
-    );
-
-
-  revealElements.forEach(function (element) {
-
-    revealObserver.observe(element);
-
-  });
-
-
-  /* ---------------------------------------
-     SUBTLE PROFILE PHOTO PARALLAX
-  --------------------------------------- */
-
-  const profile =
-    document.querySelector(
-      ".profile-photo-wrap"
-    );
-
-
-  if (
-    profile &&
-    window.matchMedia(
-      "(min-width: 851px)"
-    ).matches
-  ) {
-
-    profile.addEventListener(
-      "mousemove",
-      function (event) {
-
-        const rect =
-          profile.getBoundingClientRect();
-
-        const mouseX =
-          event.clientX - rect.left;
-
-        const mouseY =
-          event.clientY - rect.top;
-
-        const centerX =
-          rect.width / 2;
-
-        const centerY =
-          rect.height / 2;
-
-        const rotateY =
-          ((mouseX - centerX) / centerX) * 1.3;
-
-        const rotateX =
-          ((centerY - mouseY) / centerY) * 1.3;
-
-        profile.style.transform =
-          "translateY(-7px) rotateX(" +
-          rotateX +
-          "deg) rotateY(" +
-          rotateY +
-          "deg)";
-
-      }
-    );
-
-
-    profile.addEventListener(
-      "mouseleave",
-      function () {
-
-        profile.style.transform = "";
-
-      }
-    );
-
-  }
-
-
-  /* ---------------------------------------
-     ACTIVE NAVIGATION LINK
-  --------------------------------------- */
-
-  const sections =
-    document.querySelectorAll(
-      "section[id]"
-    );
-
-  const navLinks =
-    document.querySelectorAll(
-      ".nav-links a[href^='#']"
-    );
-
-
-  function updateActiveNavigation() {
-
-    let currentSection = "";
-
-    sections.forEach(
-      function (section) {
-
-        const sectionTop =
-          section.offsetTop - 180;
-
-        if (
-          window.scrollY >= sectionTop
-        ) {
-
-          currentSection =
-            section.getAttribute("id");
-
-        }
-
-      }
-    );
-
-
-    navLinks.forEach(
-      function (link) {
-
-        link.style.color = "";
-
-        if (
-          link.getAttribute("href") ===
-          "#" + currentSection
-        ) {
-
-          if (
-            !link.classList.contains(
-              "nav-button"
-            )
-          ) {
-
-            link.style.color =
-              "var(--teal)";
-
-          }
-
-        }
-
-      }
-    );
-
-  }
-
-
-  window.addEventListener(
-    "scroll",
-    updateActiveNavigation,
-    { passive: true }
-  );
-
-  updateActiveNavigation();
-
-});
-
-</script>
-  
+<script src="script.js"></script>
 </body>
 </html>
